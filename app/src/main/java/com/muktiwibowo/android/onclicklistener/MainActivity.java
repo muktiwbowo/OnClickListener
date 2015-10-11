@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Button btnPlus, btnMinus;
     TextView textView;
-    private int one = 0;
+    private int one = 14;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +22,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textView = (TextView) findViewById(R.id.text_view);
 
         btnPlus.setOnClickListener(this);
+        btnMinus.setOnClickListener(this);
     }
 
     public void fontPlus(){
-        textView.setTextSize(14);
         one = one + 1 ;
+        textView.setTextSize(one);
+    }
+
+    public void fontMinus(){
+        one = one - 1;
         textView.setTextSize(one);
     }
 
@@ -34,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == btnPlus){
             fontPlus();
+        }else if (v == btnMinus){
+            fontMinus();
         }
     }
 }
