@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v == btnPlus){
+            Toast.makeText(this,"Button +1 Clicked",Toast.LENGTH_SHORT).show();
             fontPlus();
         }else if (v == btnMinus){
+            Toast.makeText(this,"Button -1 Clicked",Toast.LENGTH_SHORT).show();
             fontMinus();
         }
     }
