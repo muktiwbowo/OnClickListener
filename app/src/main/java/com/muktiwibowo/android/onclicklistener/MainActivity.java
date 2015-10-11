@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void fontPlus(){
+        textView.setTextSize(14);
         one = one + 1 ;
         textView.setTextSize(one);
     }
